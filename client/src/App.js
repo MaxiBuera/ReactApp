@@ -1,12 +1,17 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import UsersComponent from './Components/UsersComponent';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <BrowserRouter>
+        <div className="App">
+          <Switch>
+            <Route exact path='/' component={UsersComponent} />
+          </Switch>
+        </div>
+      </BrowserRouter>
   );
 }
 
